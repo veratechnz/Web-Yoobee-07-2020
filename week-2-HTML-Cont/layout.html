@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.parent {
+			border: 1px solid black;
+			/*height: 400px;*/
+			width: 100%;
+			overflow: auto;
+		}
+
+		.child {
+			background-color: #efefef;
+			margin: 10px;
+			overflow: auto;
+		}
+
+		.grand-child {
+			background-color: red;
+			height: 40px;
+			border: 1px solid black;
+			float: left;
+			margin-right: 1%;
+			height: 280px;
+			margin: 30px;
+
+		}
+		.a {
+			width: 30.5%;
+		}
+
+		.b {
+			margin-right: 0%;
+			width: 58.8%;
+			margin-left: 1%;
+		}
+	</style>
+</head>
+<body>
+	<div class="parent">
+		<h1>Parent</h1>
+
+		<div class="child">
+			<div class="grand-child a">a</div>
+			<div class="grand-child b">b</div>
+		</div>
+
+		<div class="child">Child</div>
+		<div class="child">Child</div>
+	</div>
+</body>
+</html>

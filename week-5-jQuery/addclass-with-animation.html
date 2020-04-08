@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Basics</title>
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style>
+		/* CSS Here */
+		.box {
+			width: 300px;
+			height: 300px;
+			border-radius: 6px;
+			display: inline-block;
+			margin: 15px;
+		}
+
+		.btn {
+			background-color: grey;
+			margin-right: 45px;
+		}
+
+		.blue {
+			background-color: blue;
+		}
+
+		.green {
+			background-color: green;
+		}
+
+		.yellow {
+			background-color: yellow;
+		}
+
+		.red {
+			background-color: red;
+		}
+
+		.animation {
+			position: absolute;
+			top: 400px;
+			right: 0%;
+			background-color: #efefef;
+			border: 2px solid #333;
+			transition: right 5s ease-in;
+		}
+
+		.animation.start {
+			right: 80%;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="contain">
+		<div class="box blue"></div>
+		<div class="box green"></div>
+		<div class="box yellow"></div>
+		<div class="box red"></div>
+	</div>
+
+	<div class="contain-buttons">
+		<button class="btn" id="buttonA">Button A</button>
+		<button class="btn" id="buttonB">Button B</button>
+		<button class="btn" id="buttonC">Button C</button>
+		<button class="btn" id="buttonD">Button D</button>
+		<button class="btn" id="animateBox">Animate Box</button>
+	</div>
+
+	<div class="box animation"></div>
+	
+	<!-- This is a CDN - content delivery network that connects the....  -->
+	<!-- web page to jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+	<script>
+		// All our custom js or jQuery code
+		$(document).ready(function(){
+
+			// Pseudo code:
+
+			//1. Have a click event for the animation button
+			$('#animateBox').click(function(){
+				// Action code
+				//2. Add a class of .start to the .animation div
+				$('.animation').addClass('start');
+			});
+
+			
+		});
+		// Document Ready ENDS
+
+	</script>
+</body>
+</html>

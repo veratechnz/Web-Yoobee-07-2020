@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Comic Strip</title>
+	<style>
+		body {
+			background-color: #efefef;
+		}
+
+		.col-one,
+		.col-two,
+		.col-three {
+			width: 30%;
+			margin: 10px;
+			float: left;
+		}
+
+		.row-one {
+			border: solid 1px black;
+			/*This is the fix for a common float collapse error*/
+			overflow: auto;
+		}
+	</style>
+</head>
+<body>
+	<h1>Three Column Layout With Float</h1>
+
+	<div class="row-one">
+		<div class="col-one">
+			<!-- Comic image will go here -->
+		</div>
+
+		<div class="col-two">
+			<!-- Comic image will go here -->
+		</div>
+
+		<div class="col-three">
+			<!-- Comic image will go here -->
+		</div>
+	</div> 
+	<!-- row-one ENDS -->
+
+	<div class="row-one">
+		<div class="col-one">
+			<!-- Comic image will go here -->
+		</div>
+
+		<div class="col-two">
+			<!-- Comic image will go here -->
+		</div>
+
+		<div class="col-three">
+			<!-- Comic image will go here -->
+		</div>
+	</div> 
+	<!-- row-one ENDS -->
+
+	<div class="row-one">
+		<div class="col-one">
+			<!-- Comic image will go here -->
+		</div>
+
+		<div class="col-two">
+			<!-- Comic image will go here -->
+		</div>
+
+		<div class="col-three">
+			<!-- Comic image will go here -->
+		</div>
+	</div> 
+	<!-- row-one ENDS -->
+
+</body>
+</html>

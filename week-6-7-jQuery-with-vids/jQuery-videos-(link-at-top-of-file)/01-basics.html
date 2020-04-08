@@ -1,0 +1,127 @@
+<!-- 1. Video link and associated code file -- jQuery Basics:
+Document Ready / Hide Show / Chaining
+https://www.youtube.com/watch?v=z2oLe7RDJuE (edited)  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Basics</title>
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style>
+		/* CSS Here */
+		.box {
+			width: 300px;
+			height: 300px;
+			border-radius: 6px;
+			display: inline-block;
+			margin: 15px;
+		}
+
+		.btn {
+			background-color: grey;
+			margin-right: 45px;
+		}
+
+		.blue {
+			background-color: blue;
+		}
+
+		.green {
+			background-color: green;
+		}
+
+		.yellow {
+			background-color: yellow;
+		}
+
+		.red {
+			background-color: red;
+		}
+
+		.animation {
+			position: absolute;
+			top: 400px;
+			right: 0%;
+			background-color: #efefef;
+			border: 2px solid #333;
+			transition: right 5s ease-in;
+
+		}
+
+		.animation:hover {
+			right: 80%;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="contain">
+		<div class="box blue"></div>
+		<div class="box green"></div>
+		<div class="box yellow"></div>
+		<div class="box red"></div>
+	</div>
+
+	<div class="contain-buttons">
+		<button class="btn" id="buttonA">Button A</button>
+		<button class="btn" id="buttonB">Button B</button>
+		<button class="btn" id="buttonC">Button C</button>
+		<button class="btn" id="buttonD">Button D</button>
+	</div>
+
+	<div class="box animation"></div>
+	
+	<!-- This is a CDN - content delivery network that connects the....  -->
+	<!-- web page to jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script>
+		// All our custom js or jQuery code
+		$(document).ready(function(){
+			// 1. The code below hides all the divs
+			// and uses timeÍ
+			// $('.blue').hide(3000);
+			// $('.blue').show(3000);
+			// $('.yellow').hide(12000);
+			// $('.red').hide(15000);
+
+			// 2. This is called 'chaining', you 
+			// can see the dots that chain the
+			// code together
+			// *******
+			// Also if I want to select 2 elements
+			// I can just use a comma in the selector
+			// parentheses. 
+			// $('.box').hide(3000).show(3000).hide(3000).show(3000);
+
+			// 3. This is a jQuery event. We are using
+			// the click event, it waits for a click
+			// and then...
+			// $('#buttonA').click(function(){
+			// 	// It hides the blue box 
+			// 	$('.blue').hide(4000);
+			// });
+
+			// $('#buttonB').click(function(){
+			// 	// *** It will hide the green box,
+			// 	// and when the green box is hidden
+			// 	// it will hide the yellow box.
+
+			// 	// This is a callback function
+			// 	$('.green').hide(9000, function(){
+
+			// 		$('.yellow').hide(9000);
+
+			// 	});
+			// 	// green hide callback ENS
+				
+			// });
+			// Click function ENDS
+
+		});
+		// Document Ready ENDS
+
+	</script>
+</body>
+</html>

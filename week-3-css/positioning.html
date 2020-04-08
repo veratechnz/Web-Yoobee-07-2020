@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Absolute & Relative Positioning</title>
+	<style>
+		html {
+			height: 2500px;
+		}
+
+		.red-fixed,
+		.grey-absolute,
+		.green-relative,
+		.yellow-static {
+			width: 300px;
+			height: 150px;
+			border: 1px solid black;
+			/* These three css properties will center the text both vertically and horizontally. */
+			text-align: center;
+			vertical-align: middle;
+			line-height: 150px;
+		}
+
+		.red-fixed {
+			background-color: red;
+			position: fixed;
+			top: 25px;
+			left: 250px;
+		}
+
+		.grey-absolute {
+			background-color: #efefef;
+			position: absolute;
+			top: 0px;
+			left: 600px;
+		}
+
+		.green-relative {
+			background-color: green;
+			position: relative;
+			top: 10px;
+			left: 100px;
+		}
+
+		.yellow-static {
+			background-color: yellow;
+		}
+
+		.parent-relative {
+			position: relative;
+			top: 80px;
+			border: 1px solid #000;
+			width: 80%;
+			margin: 0 auto;
+			margin-top: 25px;
+			height: 300px;
+			padding: 20px;
+		}
+
+		.child {
+			position: absolute;
+			height: 150px;
+			border: 1px solid #000;
+			width: 25%;
+			font-size: 35px;
+			/* These three css properties will center the text both vertically and horizontally. */
+			text-align: center;
+			vertical-align: middle;
+			line-height: 75px;
+		}
+
+		.b {
+			transform: rotate(-40deg);
+			background-color: red;
+			left: 25%;
+			/* Increases or decreases the vertical stack and visibility of an element */
+			z-index: 5;
+			-webkit-box-shadow: 13px 14px 12px -10px rgba(0,0,0,0.75);
+			-moz-box-shadow: 13px 14px 12px -10px rgba(0,0,0,0.75);
+			box-shadow: 13px 14px 12px -10px rgba(0,0,0,0.75);
+		}
+
+		.c {
+			background-color: blue;
+			left: 50%;
+			width: 20%;
+			border-radius: 20px;
+			transform: rotate(45deg);
+			/* Increases or decreases the vertical stack and visibility of an element */
+			z-index: 6;
+			-webkit-box-shadow: 13px 14px 12px -10px rgba(0,0,0,0.75);
+			-moz-box-shadow: 13px 14px 12px -10px rgba(0,0,0,0.75);
+			box-shadow: 13px 14px 12px -10px rgba(0,0,0,0.75);
+		}
+
+		.d {
+			background-color: green;
+			left: 75%;
+			width: 24%;
+			border-radius: 50px;
+		}
+
+
+	</style>
+</head>
+<body>
+
+	<!-- Standard Positioning -->
+	<h3 style="float: right;">Standard Positions Demo</h3>
+	<div class="red-fixed">FIXED</div>
+	<div class="grey-absolute">ABSOLUTE</div>
+	<div class="yellow-static">STATIC-NORMAL</div>
+	<div class="green-relative">RELATIVE</div> 
+
+	<!-- Relative & Absolute In Combination -->
+	<h3>Relative & Absolute In Combination</h3>
+	<div class="parent-relative">
+		<div class="child a">A</div>
+		<div class="child b">B</div>
+		<div class="child c">C</div>
+		<div class="child d">D</div>
+	</div>
+
+	
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Full Background Image Demo</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,600&display=swap" rel="stylesheet">
+	<style>
+	/* Internal CSS */
+
+	/*This css is for a full screen background image*/
+	html {
+		font-family: 'Montserrat', sans-serif;
+		background: url(bg.jpg) no-repeat center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+	/*The div is the parent*/
+	div {
+		width: 320px;
+		height: 300px;
+		margin-left: 61%;
+		margin-top: 140px;
+		/*background-color: #225328;*/
+		padding: 24px;
+		color: white;
+		font-size: 20px;
+		background-color: rgba(0, 0, 0, 0.8);
+		border-radius: 8px;
+	}
+
+	h2 {
+		font-weight: 300;
+	}
+
+	h3 {
+		color: white;
+		text-transform: uppercase;
+		font-weight: 100;
+	}
+
+	h4 {
+		font-weight: 100;
+	}
+
+	span {
+		text-transform: uppercase;
+		font-weight: 300;
+	}
+
+	</style>
+</head>
+<body>
+	<!-- This is our person information div -->
+	<!-- The div is the parent of all the headers and paragraphs -->
+	<div class="one">
+		<h2>Juan Caro</h2>
+		<h4><span>Favorite Food:</span> Cheeseburger</h4>
+		<h4><span>Favorite Drink:</span> Beer</h4>
+		<h4><span>Favorite City:</span> Paris</h4>
+	</div>
+</body>
+</html>

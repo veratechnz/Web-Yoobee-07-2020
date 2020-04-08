@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Basic Float</title>
+	<style>
+		body {
+			background-color: #efefef;
+		}
+
+		.col-one,
+		.col-two,
+		.col-three {
+			width: 30%;
+			margin: 10px;
+			float: left;
+		}
+
+		.row-one {
+			border: solid 1px black;
+			/*This is the fix for a common float collapse error*/
+			/*overflow: auto;*/
+		}
+	</style>
+</head>
+<body>
+	<h1>Three Column Layout With Float</h1>
+
+	<div class="row-one">
+		<div class="col-one">
+			<h3>Column One</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit cupiditate rem natus similique eum inventore, porro beatae distinctio fugiat incidunt, facere facilis, odio numquam odit minima nesciunt. Nobis, unde, quaerat.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit cupiditate rem natus similique eum inventore, porro beatae distinctio fugiat incidunt, facere facilis, odio numquam odit minima nesciunt. Nobis, unde, quaerat.</p>
+		</div>
+
+		<div class="col-two">
+			<h3>Column Two</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit cupiditate rem natus similique eum inventore, porro beatae distinctio fugiat incidunt, facere facilis, odio numquam odit minima nesciunt. Nobis, unde, quaerat.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit cupiditate rem natus similique eum inventore, porro beatae distinctio fugiat incidunt, facere facilis, odio numquam odit minima nesciunt. Nobis, unde, quaerat.</p>
+		</div>
+
+		<div class="col-three">
+			<h3>Column Three</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit cupiditate rem natus similique eum inventore, porro beatae distinctio fugiat incidunt, facere facilis, odio numquam odit minima nesciunt. Nobis, unde, quaerat.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit cupiditate rem natus similique eum inventore, porro beatae distinctio fugiat incidunt, facere facilis, odio numquam odit minima nesciunt. Nobis, unde, quaerat.</p>
+		</div>
+	</div> 
+	<!-- row-one ENDS -->
+
+</body>
+</html>

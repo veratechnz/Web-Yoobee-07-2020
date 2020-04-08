@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Basics</title>
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style>
+		/* CSS Here */
+
+		html, 
+		body {
+			height: 2500px;
+		}
+
+		.box {
+			width: 300px;
+			height: 300px;
+			border-radius: 6px;
+			display: inline-block;
+			margin: 15px;
+		}
+
+		.btn {
+			background-color: grey;
+			margin-right: 45px;
+		}
+
+		.blue {
+			background-color: blue;
+		}
+
+		.green {
+			background-color: green;
+		}
+
+		.yellow {
+			background-color: yellow;
+		}
+
+		.red {
+			background-color: red;
+		}
+
+		.animation {
+			position: absolute;
+			top: 400px;
+			right: 0%;
+			background-color: #efefef;
+			border: 2px solid #333;
+			transition: right 5s ease-in;
+			cursor: pointer;
+		}
+
+		.animation.move-left {
+			right: 80%;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="contain">
+		<div class="box blue"></div>
+		<div class="box green"></div>
+		<div class="box yellow"></div>
+		<div class="box red"></div>
+	</div>
+
+	<div class="contain-buttons">
+		<button class="btn" id="buttonA">Button A</button>
+		<button class="btn" id="buttonB">Button B</button>
+		<button class="btn" id="animateMe">Animation</button>
+		<button class="btn" id="changeCss">Change CSS</button>
+	</div>
+
+	<div class="box animation"></div>
+	
+	<!-- 1. This is a CDN - content delivery network that connects the....  -->
+	<!-- web page to jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js">
+	</script>
+	<script src="jquery.waypoints.js"></script>
+	<script>
+		// 2. All our custom js or jQuery code
+		$(document).ready(function(){
+			// 3. The code below hides all the divs
+			// and uses time
+			// $('.blue').hide(5000);
+			// $('.green').hide(10000);
+			// $('.yellow').hide(12000);
+			// $('.red').hide(15000);
+
+			// 4. This is called 'chaining', you 
+			// can see the dots that chain the
+			// code together
+			// *******
+			// Also if I want to select 2 elements
+			// I can just use a comma in the selector
+			// parentheses. 
+			// $('.box').hide(3000).show(3000);
+
+			// 4. This is a jQuery event. We are using
+			// the click event, it waits for a click
+			// and then...
+			// $('#buttonA').click(function(){
+			// 	// It hides the blue box 
+			// 	$('.blue').hide(4000);
+			// });
+
+
+			// 5. This button event uses a callback function
+			// a callback function waits for the first jQuery function
+			// to end (in this case .green hide()) and then begins 
+			// the next function (.yellow .hide())
+			// $('#buttonB').click(function(){
+			// 	// *** It will hide the green box,
+			// 	// and when the green box is hidden
+			// 	// it will hide the yellow box.
+
+			// 	// This is a callback function
+
+			// 	$('.green').hide(4000, function(){
+
+			// 		$('.yellow').hide(4000);
+
+			// 	});
+			// 	// green hide callback ENS
+				
+			// });
+			// Click  '.buttonB' ENDS
+
+			// 6. EVENTS
+			// This is a scroll event
+			// $(window).scroll(function() {
+			// 	console.log('a');
+			// });
+
+			// 7. This is selecting the red div or box
+			// and adding a mouseenter or hover event
+			// $('.red').mouseenter(function() {
+				// This is inside of the function
+				// body, it is the action code or
+				// 'go do stuff!'
+				// alert('mouseenter is working');
+			// });
+
+			// 8. We have a click event on the 
+			// animate button...
+			$('#animateMe').click(function(){
+
+				// this will happen - go do stuff!
+				// 9. If we want to change the css of something
+				// we can use the jQuery css method
+				$('.animation').addClass('move-left');
+
+			});
+			// animateMe click function ENDS
+
+			// 9. We have a click event on the 
+			// change css button...
+			$('#changeCss').click(function(){
+
+				// this will happen - go do stuff!
+				// 9. If we want to change the css of something
+				// we can use the jQuery css method
+				$('.red').css( 'background-color', 'green' );
+
+			});
+			// animateMe click function ENDS
+
+
+		});
+		// Document Ready ENDS
+
+	</script>
+</body>
+</html>

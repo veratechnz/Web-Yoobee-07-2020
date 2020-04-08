@@ -1,0 +1,82 @@
+<!-- 6. jQuery css method and javascript :alarm_clock:setTimeout (For The Brave) :woman-lifting-weights::skin-tone-2::man-lifting-weights:
+https://www.youtube.com/watch?v=k5IGvGceN38 (edited)  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sunrise</title>
+	<!-- Internal Css -->
+	<style>
+		html, 
+		body {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}
+
+		.sky-background {
+			/* Instructing the div to fill the body and html */
+			width: 100%;
+			height: 100%;
+			z-index: 5;
+			display: block;
+			position: relative;
+			background-color: black;
+		}
+		
+		/* This is looking for the image inside of .element */
+		.sun-image {
+			position: absolute;
+			bottom: -10%;
+			/* (2.) Transition is the easiest animation control in css - choose a property - 'bottom' and 
+			a time to animate it, then change it on an event, like hover below. */
+			transition: bottom 25s;
+			border-radius: 80%;
+			width: 280px;
+			z-index: 15;
+			left: 42%;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="sky-background"></div>
+	<img src="sun-a.png" alt="" class="sun-image">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script>
+
+		$(document).ready(function(){
+
+		  // 1. Console log
+		  	 // console.log('working');
+
+
+			// 2. A setTimeout function  targetting the sky-background div 
+			// and changing the css to background-color yellow
+				// setTimeout(function(){
+
+				// 	// Waits 2 seconds before this happens
+				// 	$('.sky-background').css('background-color', '#00b6ff');
+				// 	alert('im working');
+
+				// }, 2000)
+
+
+			// 3.  Click on the sun and change background color of sky and sun size 
+				// $('img').click(function(){
+				// 	// Run code
+				// 	// Changes the background color
+				// 	$('.sky-background').css('background-color', '#00b6ff');
+				// 	// Change the size of the sun
+				// 	$('.sun-image').css('width', '400px');
+				// });
+
+		});
+		// Document Ready ENDS
+
+	</script>
+</body>
+</html>
